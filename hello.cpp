@@ -1,14 +1,24 @@
 #include <iostream>
+#include <fstream>
+using namespace std;
 
 int main()
 {
-    // This is a comment
-    /**
-     * This is a comment
-     * This is a comment
-     * This is a comment
-     */
-    std::cout << "Hello, World!" << '\n';
-    std::cout << "Hello,s Bangladesh!" << '\n';
+    try
+    {
+        int age = 18;
+        if (age >= 18)
+        {
+            cout << "You are old enough to vote!" << endl;
+        }
+        else
+        {
+            throw runtime_error("You are not old enough to vote!");
+        }
+    }
+    catch (runtime_error e)
+    {
+        cout << e.what() << endl;
+    }
     return 0;
 }
